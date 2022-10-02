@@ -18,12 +18,12 @@ document.getElementById("player-expenses-btn").addEventListener("click", functio
 
     const getPlayerExpenses = document.getElementById("total-player-expenses");
 
-    const playerExpenses = parseInt(getPlayerExpenses.innerText);
+    const playerExpenses = parseFloat(getPlayerExpenses.innerText);
     
     if(playerExpenses === 0) {
 
      alert("Please select players");
-     
+
       return;
     }
   });

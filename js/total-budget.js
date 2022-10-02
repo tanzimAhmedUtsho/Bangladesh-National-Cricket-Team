@@ -1,7 +1,7 @@
 document.getElementById("total-expenses").addEventListener("click", function (){
 
     const getPlayersExpenses = document.getElementById("total-player-expenses");
-    const playersExpenses = parseInt(getPlayersExpenses.innerText);
+    const playersExpenses = parseFloat(getPlayersExpenses.innerText);
 
     const budgetForManager = getInputValue("budget-for-manager");
     const budgetForCoach = getInputValue("budget-for-coach");
