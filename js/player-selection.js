@@ -1,11 +1,12 @@
-document
-  .getElementById("player-expenses-btn")
-  .addEventListener("click", function () {
+document.getElementById("player-expenses-btn").addEventListener("click", function (){
+
     const getPlayersList = document.getElementById("player-selected");
     const playersNumber = getPlayersList.childNodes.length;
 
     const perPlayerBudget = getInputValue("per-player-budget");
-    if (isNaN(perPlayerBudget) || perPlayerBudget < 0) {
+
+    if(isNaN(perPlayerBudget) || perPlayerBudget < 0) {
+
      alert("Input valid number");
 
     
@@ -19,8 +20,10 @@ document
 
     const playerExpenses = parseInt(getPlayerExpenses.innerText);
     
-    if (playerExpenses === 0) {
+    if(playerExpenses === 0) {
+
      alert("Please select players");
+     
       return;
     }
   });

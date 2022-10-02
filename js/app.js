@@ -3,6 +3,7 @@ const totalPlayers = document.querySelectorAll(".select-player-btn");
 for (const player of totalPlayers) {
 
   player.addEventListener("click", function (selectField) {
+    
     const playerName = selectField.target.parentNode.childNodes[1].innerText;
 
     const getPlayersList = document.getElementById("player-selected");
@@ -10,17 +11,20 @@ for (const player of totalPlayers) {
 
     console.log(playersNumber);
     if (playersNumber > 4) {
+
      alert("You can't add more than five players")
+
       return;
     }
 
-    const createLi = document.createElement("li");
-    createLi.innerText = playerName;
+    const liCreate = document.createElement("li");
 
-    getPlayersList.appendChild(createLi);
+    liCreate.innerText = playerName;
+
+    getPlayersList.appendChild(liCreate);
 
     selectField.target.setAttribute("disabled", true);
     selectField.target.style.backgroundColor = "light-blue";
-    selectField.target.innerText = "SELECTED";
+    
   });
 }
